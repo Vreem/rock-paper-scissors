@@ -1,12 +1,71 @@
+
+//  Step 2: Write the logic to get the computer choice.
+//      -Create function getComputerChoice
+//          -Create variable randomNumber, use Math.random * 3 to generate a random number 
+//           between 0 and 3 and use Math.floor to round that number to the nearest integer.
+//              -Create conditionals to return either Rock, Paper or Scissors if one of three 
+//               numbers is returned.
+
 function getComputerChoice() {
-    return Math.random();
-        if (getComputerChoice = 0.25) {
-            console.log("Rock!");
+    const randomNumber = Math.floor(Math.random() * 3);
+        if (randomNumber == 0) {
+            return "Computer chose Rock";
         }
-        if (getComputerChoice = 0.5) {
-            console.log("Paper!");
+        else if (randomNumber == 1) {
+            return "Computer chose Paper";
         }
         else {
-            console.log("Scissors!");
+            return "Computer chose Scissors";
         }
 }
+console.log(getComputerChoice());
+
+//  Step 3: Write the logic to get the human choice.
+//      -Create function getHumanChoice
+//          -To get user input use a prompt
+//              -User input must be capitalized at the first character
+
+
+function getHumanChoice() {
+    let userInput = prompt('choose either Rock Paper or Scissors');
+        if (userInput === null) {
+            return "You chose to run away";
+        }
+        else if (userInput == 'Rock') {
+            return "You chose Rock";
+        }
+        else if (userInput == 'Paper') {
+            return "You chose Paper";
+        }
+        else {
+            return "You chose Scissors";
+        }
+}
+console.log (getHumanChoice());
+
+//  Step 4: Declare the players score variables.
+//      -Create two variables named humanScore and computerScore in the global scope
+//          -Initialize those variables with the value of 0
+
+let humanScore = 0;
+let computerScore = 0;
+
+//  Step 5: Write the logic to play a single round.
+//     -Create a function named playRound with parameters (humanChoice and Computerchoice).
+//        Use these parameters to take human and computer choices as arguments.
+//         -Make param humanChoice case-insensitive so player capitalization does not matter.
+//     -Let playRound function console.log a string representing the round winner.
+//      ex. "You lose! Paper beats Rock!"
+//    -Increment the humanScore or computerScore variable based on the round winner.
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == "Rock" && computerChoice == "Scissors") {
+        return "You win! Rock beats Scissors!"
+    }
+}
+    
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
