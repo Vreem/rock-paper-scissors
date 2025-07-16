@@ -59,11 +59,29 @@ let computerScore = 0;
 //    -Increment the humanScore or computerScore variable based on the round winner.
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice == "Rock" && computerChoice == "Scissors") {
-        return "You win! Rock beats Scissors!"
+    //WIN
+    if (humanChoice == "Rock" && computerChoice == "Scissors"
+        ||
+        humanchoice == "Paper" && computerChoice == "Rock"
+        ||
+        humanChoice == "Scissors" && computerChoice == "Paper"
+    ) {
+        return "You win!";
+    }
+    //LOSE
+    else if (humanChoice == "Rock" && computerChoice == "Paper"
+        ||
+            humanChoice == "Paper" && computerChoice == "Scissors"
+        ||
+            humanChoice == "Scissors" && computerChoice == "Rock"
+    ) {
+        return "You lose!";
+    }
+    //TIE
+    else {
+        return "It's a draw!";
     }
 }
-    
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
