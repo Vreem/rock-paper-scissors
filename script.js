@@ -9,13 +9,13 @@
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
         if (randomNumber == 0) {
-            return "Computer chose Rock";
+            return "Rock";
         }
         else if (randomNumber == 1) {
-            return "Computer chose Paper";
+            return "Paper";
         }
         else {
-            return "Computer chose Scissors";
+            return "Scissors";
         }
 }
 console.log(getComputerChoice());
@@ -27,18 +27,18 @@ console.log(getComputerChoice());
 
 
 function getHumanChoice() {
-    let userInput = prompt('choose either Rock Paper or Scissors');
+    const userInput = prompt('choose either Rock Paper or Scissors');
         if (userInput === null) {
             return "You chose to run away";
         }
         else if (userInput == 'Rock') {
-            return "You chose Rock";
+            return "Rock";
         }
         else if (userInput == 'Paper') {
-            return "You chose Paper";
+            return "Paper";
         }
         else {
-            return "You chose Scissors";
+            return "Scissors";
         }
 }
 console.log (getHumanChoice());
@@ -62,7 +62,7 @@ function playRound(humanChoice, computerChoice) {
     //WIN
     if (humanChoice == "Rock" && computerChoice == "Scissors"
         ||
-        humanchoice == "Paper" && computerChoice == "Rock"
+        humanChoice == "Paper" && computerChoice == "Rock"
         ||
         humanChoice == "Scissors" && computerChoice == "Paper"
     ) {
@@ -82,6 +82,8 @@ function playRound(humanChoice, computerChoice) {
         return "It's a draw!";
     }
 }
+
+console.log(playRound());
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
