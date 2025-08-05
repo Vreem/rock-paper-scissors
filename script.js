@@ -9,15 +9,15 @@
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
         if (randomNumber == 0) {
-            console.log("Rock");
+            console.log("Computer chose " + "Rock");
             return "Rock";
         }
         else if (randomNumber == 1) {
-            console.log("Paper");
+            console.log("Computer chose " + "Paper");
             return "Paper";
         }
         else {
-            console.log("Scissors");
+            console.log("Computer chose " + "Scissors");
             return "Scissors";
         }
 }
@@ -34,15 +34,15 @@ function getHumanChoice() {
             console.log("You chose to run away");
         }
         else if (userInput == "Rock") {
-            console.log("Rock");
+            console.log("You chose " + "Rock");
             return "Rock";
         }
         else if (userInput == "Paper") {
-            console.log("Paper");
+            console.log("You chose " + "Paper");
             return "Paper";
         }
         else {
-            console.log("Scissors");
+            console.log("You chose " + "Scissors");
             return "Scissors";
         }
 }
